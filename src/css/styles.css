@@ -12,7 +12,12 @@
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./mobile-menu.css');
+@import url('./hero.css');
+@import url('./about.css');
+@import url('./lessons.css');
+@import url('./proposal.css');
+@import url('./teachers.css');
+@import url('./application-form.css');
+@import url('./reviews.css');
 @import url('./footer.css');
