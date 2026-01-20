@@ -1,5 +1,53 @@
-<section class="application-form">
+<section class="section application-section">
   <div class="container">
-    <p>Application Form Placeholder</p>
+    <h2 class="section-title">Leave an <span class="accent-text">application</span></h2>
+    <p class="section-description">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
+
+    <form class="application-form">
+      <div class="form-group">
+        <input type="text" name="user_name" class="form-input" placeholder="Name" />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="user_email" class="form-input" placeholder="Email" />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="user_phone" class="form-input" placeholder="Phone" />
+      </div>
+
+      <div class="form-group">
+        <textarea name="user_comment" class="form-input form-textarea" placeholder="Comment"></textarea>
+      </div>
+
+      <div class="radio-wrapper">
+        <p class="radio-title">Choose a teacher</p>
+
+        <label class="radio-label">
+          <input type="radio" name="teacher" value="Maria" class="radio-input" />
+          <span class="radio-castom">Maria</span>
+        </label>
+
+        <label class="radio-label">
+          <input type="radio" name="teacher" value="Artem" class="radio-input" />
+          <span class="radio-castom">Artem</span>
+        </label>
+
+        <label class="radio-label">
+          <input type="radio" name="teacher" value="Ilona" class="radio-input" />
+          <span class="radio-castom">Ilona</span>
+        </label>
+
+        <label class="radio-label">
+          <input type="radio" name="teacher" value="Volodymyr" class="radio-input" />
+          <span class="radio-castom">Volodymyr</span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Send</button>
+
+      <p class="policy-text">By clicking on “Send” button, you agree to our <a href="#">Privacy Policy</a>, and allow Promodo to use this information for marketing purposes.</p>
+    </form>
+
   </div>
 </section>
