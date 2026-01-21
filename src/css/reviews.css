@@ -1,7 +1,6 @@
 /* ============================================
    REVIEWS SECTION
    ============================================ */
-
 .reviews {
   padding: 60px 0;
 }
@@ -103,6 +102,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.reviews-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.reviews-item:focus-within {
+  outline: 2px solid var(--green-main);
+  outline-offset: 2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -155,6 +165,7 @@
   border: 3px solid var(--white);
   flex-shrink: 0;
   object-fit: cover;
+  display: block;
 }
 
 @media only screen and (min-width: 768px) {
