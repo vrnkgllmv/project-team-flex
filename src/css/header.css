@@ -1,0 +1,141 @@
+/* Header */
+.header {
+  padding: 17.5px 20px;
+  min-width: 320px;
+  max-width: 375px;
+  max-height: 67px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  gap: 0px;
+}
+
+.logo span:first-child {
+  color: #121417;
+}
+
+.logo span:nth-child(2) {
+  color: #4dc274;
+}
+
+.logo span:last-child {
+  color: #121417;
+}
+
+/* Hide on mobile */
+.nav {
+  display: none;
+}
+
+.header-social-list {
+  display: none;
+}
+
+/* Mobile menu button */
+.mobile-menu-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .header {
+    max-height: 74px;
+    padding: 20px 32px;
+    max-width: 768px;
+  }
+
+  .mobile-menu-button {
+    width: 40px;
+    height: 28px;
+  }
+
+  .menu-icon {
+    width: 40px;
+    height: 28px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .header {
+    max-width: 100%;
+    padding: 0px;
+  }
+
+  .header .container {
+    max-width: 1280px;
+    min-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 128px;
+  }
+
+  /* Show navigation */
+  .nav {
+    display: flex;
+    margin: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    color: #1e1e1e;
+  }
+
+  /* Show social */
+  .header-social-list {
+    display: flex;
+    gap: 12px;
+  }
+
+  .header-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #1214171a;
+  }
+
+  .header-social-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Hide mobile menu button */
+  .mobile-menu-button {
+    display: none;
+  }
+}
