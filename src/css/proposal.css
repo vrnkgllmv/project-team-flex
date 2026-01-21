@@ -1,0 +1,160 @@
+.proposal {
+    padding: 100px 0;
+}
+
+.proposal-wrapper {
+    position: relative;
+    padding: 100px 20px 160px;
+    background: linear-gradient(135deg, #78D79B 0%, #A6E7C1 100%);
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proposal-main-title {
+    margin: 0 0 80px 0;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.1;
+    color: var(--white);
+    max-width: 800px;
+}
+
+.accent-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.proposal-card-visual-stack {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1050px;
+    margin: 48px auto 0;
+    min-height: 462px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Нижня напівпрозора карта */
+.proposal-card-visual-stack::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    width: 1010px;
+    height: 401px;
+    background: #d4fde1;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%) rotate(-11deg);
+    pointer-events: none;
+}
+
+/* Середня зеленувата карта */
+.proposal-card-visual-stack::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 1049px;
+    height: 462px;
+    background: var(--accent-color);
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(8deg);
+    pointer-events: none;
+}
+
+/* Основна біла картка */
+.proposal-card {
+    position: relative;
+    z-index: 2;
+    background: var(--white);
+    border-radius: 30px;
+    padding: 64px;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.proposal-content {
+    max-width: 654px;
+    flex: 1;
+}
+
+.proposal-card-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.proposal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+
+}
+
+.proposal-item {
+    display: flex;
+    align-items: flex-start;
+    max-width: 654px;
+    gap: 16px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #111827;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.proposal-item:last-child {
+    margin-bottom: 0;
+}
+
+.proposal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap:0;
+    width: 306px;
+    height: 60px;
+    background-color: var(--green-main);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: background-color 0.3s;
+
+}
+
+.proposal-books {
+    position: absolute;
+    flex-shrink: 0;
+    right: 0;
+    margin-bottom: 50px;
+    bottom: 0;
+    max-width: 214px;
+    height: auto;
+}
+
+.proposal-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}

@@ -30,3 +30,46 @@ main {
 main:has(.back-link) {
   text-align: center;
 }
+
+
+
+:root {
+  --main-font: 'Manrope', sans-serif;
+
+  /* Colors */
+
+  /* Brand */
+  --green-main: #4DC274;
+  --green-light: #BEE8CC;
+  --accent-color: rgba(255, 255, 255, 0.5);
+  /* Для тексту "Language" */
+
+  /* Text */
+  --text-dark: #121417;
+  --white: #FFFFFF;
+
+  /* Muted text */
+  --text-dark-50: rgba(18, 20, 23, 0.5);
+  --text-white-70: rgba(255, 255, 255, 0.7);
+  --text-white-60: rgba(255, 255, 255, 0.6);
+
+  /*Background-colors*/
+  --bg-light: #f6f6f6;
+  --card-bg: #ffffff;
+
+  /* UI */
+  --border: rgba(18, 20, 23, 0.12);
+  --transition: 250ms ease;
+
+
+}
+
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-dark-50);
+  background-color: var(--bg-light);
+
+}

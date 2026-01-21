@@ -1,35 +1,60 @@
-.header-logo{
-    background-image:
-      linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%),
-      url('../images/bg-photo.png');
+/* Базові стилі для Mobile (1x) */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+        url('../images/hero-photo.png');
+    /* */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    }
+}
 
-@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .header-logo {
-        background-image:linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-        url('../images/bg-photo@2x.png');
+/* Retina для Mobile (@2x) */
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+            url('../images/hero-photo@2x.png');
+        /* */
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .header-logo {
-        background-image:
-        linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-        url('../images/bg-photo.png');
+/* Tablet (1x) */
+@media screen and (min-width: 768px) {
+    .hero-image{
+        background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+            url('../images/hero-photo.png');
+        /* */
     }
-    
+
+    /* Retina для Tablet (@2x) */
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero-image{
+            background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+                url('../images/hero-photo@2x.png');
+            /* */
+        }
+    }
 }
 
+/* Desktop (1x) */
+@media screen and (min-width: 1280px) {
 
-/* Styles for Desktop devices */
-@media only screen and (min-width: 1200px) {
-    .header-logo{
-        background-image:
-        linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
-        url('../images/bg-photo.png');
+    /* */
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+            url('../images/hero-photo.png');
+        /* */
+    }
+
+    /* Retina для Desktop (@2x) */
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+                url('../images/hero-photo@2x.png');
+            /* */
+        }
     }
 }
 

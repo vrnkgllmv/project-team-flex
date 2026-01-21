@@ -1,12 +1,11 @@
 <section class="hero">
   <div class="container">
     <p>Hero Placeholder</p>
-    <img class="header-logo" 
-    srcset="./images/bg-photo.png 1x, ./images/bg-photo@2x.png 2x" 
-    src="./images/bg-photo.png"
-    alt="Girl wearing headphones studying online at a desk" width="629" 
-    loading="lazy"
-    />
+    <picture>
+      <source srcset="./images/hero-photo.png 1x, ./images/hero-photo@2x.png 2x">
+      <img class="hero-image" src="./images/hero-photo.png" srcset="./images/hero-photo@2x.png 2x"
+        alt="Girl wearing headphones studying online at a desk" loading="lazy">
+    </picture>
     <svg class="hero-icon" width="24" height="24">
       <use href="./images/icons.svg#icon-arrow"></use>
     </svg>
