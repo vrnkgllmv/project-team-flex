@@ -11,7 +11,7 @@
 <path d="M19.52 4.64c0.24 0 0.48 0 0.96 0v3.6c-0.24 0-0.72 0-1.2 0s-0.96 0-1.2 0.24c-0.24 0.24-0.24 0.48-0.24 1.040 0 0.48 0 0.8 0 1.28h2.64v3.040h-2.64v13.2h-4.080v-13.28h-2.16v-3.040h2.16v-1.040c0-1.76 0.24-3.040 0.72-3.6 0.72-1.040 2.16-1.52 4.32-1.52 0.24 0.080 0.48 0.080 0.72 0.080z"/>
 </symbol>
 <symbol id="icon-close-btn" viewBox="0 0 32 32">
-<path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="96" stroke="#000" d="m768 256-512 512M256 256l512 512"/>
+<path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" d="M8 8L24 24M24 8L8 24"/>
 </symbol>
 <symbol id="icon-mobile-menu" viewBox="5 7 27 17">
  <path fill="none" stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3" stroke="#000" d="M6.37 8.379h24.13M6.37 22.318h24.13M14.022 15.348h16.478"/>
