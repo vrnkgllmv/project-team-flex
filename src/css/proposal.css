@@ -1,132 +1,384 @@
-.proposal {
-    padding: 100px 0;
+
+body {
+    display: block;
+    min-height: 100vh;
 }
 
-/* Зовнішній зелений контейнер */
+.proposal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .proposal {
+        padding: 60px 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal .container {
+        max-width: 752px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal .container {
+        max-width: 1200px;
+        padding: 100px 0;
+    }
+}
+
+/* Wrapper (зелений блок) */
 .proposal-wrapper {
     position: relative;
-    padding: 100px 60px 140px;
+    padding: 40px 12px 60px;
     background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
-    border-radius: 32px;
+    border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    min-height: 737px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
-/* Відступ між заголовком і стеком карт */
-.proposal-header {
-    margin-bottom: 80px;
-    text-align: left;
+@media only screen and (min-width: 768px) {
+    .proposal-wrapper {
+        width: 704px;
+        max-width: 704px;
+        min-height: 950px;
+        margin: 0 auto;
+        padding: 60px 48px;
+        align-items: flex-start;
+    }
 }
 
+@media only screen and (min-width: 1280px) {
+    .proposal-wrapper {
+        width: 1152px;
+        max-width: 1152px;
+        min-height: 950px;
+        padding: 100px 64px;
+    }
+}
+
+/* Main Title (вгорі в зеленому блоці) */
 .proposal-main-title {
     font-weight: 700;
-    font-size: 56px;
+    font-size: 38px;
     line-height: 1.1;
     color: var(--white);
+    margin: 0 0 40px 0;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
 
-    max-width: 800px;
-    margin: 0 0 80px 0;
 }
 
 .accent-text {
-    color: var(--text-white-70);
+    color: var(--green-light);
 }
 
-/* Контейнер-стек */
+@media only screen and (min-width: 768px) {
+    .proposal-main-title {
+        padding: 0;
+        margin-bottom: 32px;
+        font-size: 60px;
+        text-align: left;
+        line-height: 1.1;
+        max-width: 100%
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-main-title {
+        text-align: left;
+        font-weight: 700;
+        line-height: 1.2;
+        width: 100%;
+        padding-left: 64px;
+        margin: 0 0 32px 0;
+        
+    }
+}
+
+/* Card Visual Stack */
 .proposal-card-visual-stack {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 1050px;
-    display: flex;
-    justify-content: center;
+    width: 295px;
+    height: 408px;
+    margin: 0 auto;
+    height: 408px;
+    border-radius: 16px;
+    background: transparent;
 }
 
-/* Універсальні налаштування для фонових шарів */
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .proposal-card-visual-stack {
+        max-width: none;
+        width: calc(100% + 96px);
+        height: 500px;
+        justify-content: flex-start;
+        margin: 0 -48px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card-visual-stack {
+        width: 1024px;
+        max-width: 1024px;
+        height: 471px;
+        margin: 0 auto;
+    }
+}
+
+/* Stack Layers */
 .proposal-card-visual-stack::before,
 .proposal-card-visual-stack::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 2px;
-    border-radius: 30px;
+    inset: 0;
+    border-radius: 16px;
     pointer-events: none;
+
 }
 
-/* Нижня напівпрозора карта */
+@media only screen and (min-width: 768px) {
+
+    .proposal-card-visual-stack::before,
+    .proposal-card-visual-stack::after {
+        border-radius: 30px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+
+    .proposal-card-visual-stack::before,
+    .proposal-card-visual-stack::after {
+        border-radius: 30px;
+    }
+}
+
 .proposal-card-visual-stack::before {
     z-index: -2;
-    background: var(--proposal-bg-light);
-    transform: rotate(-11deg);
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(-11deg) translate(28px, 28px);
     opacity: 0.5;
+
 }
 
-/* Середня зеленувата карта */
+@media only screen and (min-width: 768px) {
+    .proposal-card-visual-stack::before {
+        transform: rotate(-11deg) translate(28px, 28px);
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card-visual-stack::before {
+        transform: rotate(-11deg);
+
+    }
+}
+
 .proposal-card-visual-stack::after {
     z-index: -1;
-    background: var(--accent-color);
-    transform: rotate(8deg);
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(9deg) translate(32px, 32px);
+    opacity: 1;
+    border-radius: 16px;
 }
 
-/* Основна біла картка */
+@media only screen and (min-width: 768px) {
+    .proposal-card-visual-stack::after {
+        transform: rotate(10deg) translate(52px, 52px);
+        border-radius: 30px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card-visual-stack::after {
+        transform: rotate(8deg) translate(64px, 64px);
+    }
+}
+
+/* Card */
 .proposal-card {
-    position: relative;
-    z-index: 2;
     background: var(--white);
-   
-    border-radius: 30px;
-    padding: 64px;
+    border-radius: 16px;
     width: 100%;
+    max-width: none;
+    padding: 40px 20px 20px;
+    transform: none;
+
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.proposal-content {
-    max-width: 654px;
-    flex: 1;
+@media only screen and (min-width: 768px) {
+    .proposal-card {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        padding: 40px;
+        gap: 20px;
+
+    }
 }
 
+@media only screen and (min-width: 1280px) {
+    .proposal-card {
+        width: 100%;
+        border-radius: 30px;
+        padding: 64px;
+        max-width: 100%;
+        min-height: 470px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        position: relative;
+    }
+}
+
+/* Content */
+.proposal-content {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    z-index: 3;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-content {
+        flex: 1;
+        max-width: 360px;
+        padding-right: 120px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-content {
+        max-width: 610px;
+    }
+}
+
+/* Card Title */
 .proposal-card-title {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     color: var(--text-dark);
     letter-spacing: -0.02em;
     line-height: 1.2;
+    text-align: left;
+    padding: 0;
 }
 
+@media only screen and (min-width: 768px) {
+    .proposal-card-title {
+        width: 307px;
+        font-size: 40px;
+        margin-bottom: 24px;
+        padding: 0;
+        text-align: left;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card-title {
+        gap: 40px;
+    }
+}
+
+/* List */
 .proposal-list {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 20px;
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin-bottom: 40px;
-    max-width: 654px;
 }
 
+@media only screen and (min-width: 768px) {
+    .proposal-list {
+        width: 481px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 30px;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-list {
+        width: 610px;
+        height: 156px;
+        gap: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* List Item */
 .proposal-item {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
-    font-size: 20px;
+    gap: 8px;
+    font-size: 16px;
     line-height: 1.4;
     color: var(--text-dark);
     font-weight: 700;
+    padding: 0;
+    max-width: 255px;
 }
 
+@media only screen and (min-width: 768px) {
+    .proposal-item {
+        max-width: 451px;
+        gap: 16px;
+        font-size: 20px;
+        font-weight: 700;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-item {
+        gap: 16px;
+        width: 624px;
+        max-width: 624px;
+        height: 48px;
+    
+    }
+}
+
+/* Button */
 .proposal-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 306px;
-    height: 60px;
+    width: 255px;
+    height: 52px;
+    box-sizing: border-box;
+
+    margin: 20px auto 0;
     background-color: var(--green-main);
     color: var(--white);
     text-decoration: none;
@@ -134,21 +386,132 @@
     font-weight: 700;
     font-size: 18px;
     transition: transform 0.2s, background-color 0.3s;
+    padding: 0 20px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-button {
+        max-width: 306px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-button {
+        width: 306px;
+        margin-top: 40px;
+    }
 }
 
 .proposal-button:hover {
     transform: translateY(-2px);
 }
 
+/* Books Image */
 .proposal-books {
-    position: absolute;
-    right: 0;
-    flex-shrink: 0;
-    max-width: 250px;
-    height: auto;
-    margin-left: 30px;
+    display: none;
 }
 
+@media only screen and (min-width: 768px) {
+    .proposal-books {
+        display: block;
+        position: absolute;
+        right: -38px;
+        left: auto;
+        bottom: 20px;
+        flex-shrink: 0;
+        max-width: 214px;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-books {
+        display: block;
+        position: absolute;
+        right: -10px;
+        margin-bottom: 80px;
+        flex-shrink: 0;
+        max-width: 250px;
+        height: auto;
+    }
+}
+
+/* Icon */
 .proposal-icon {
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
+    display: block;
+    flex: 0 0 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-icon {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex: 0 0 28px;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-icon {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex: 0 0 28px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal {
+        padding: 100px 0;
+    }
+}
+
+.proposal-item-text {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    letter-spacing: -0.02em;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.proposal-item:nth-child(2) .proposal-icon {
+    margin-top: 10px;
+}
+
+.proposal-item:nth-child(3) .proposal-icon {
+    align-self: center;
+    margin-top: 0;
+}
+
+.proposal-item:nth-child(1) .proposal-icon {
+    align-self: center;
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-item-text {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 405px;
+        flex: 0 0 405px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-item-text {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        max-width: 610px;
+        width: 610px;
+        flex: 0 0 610px;
+        white-space: normal;
+    }
 }
