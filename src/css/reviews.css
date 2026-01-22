@@ -1,3 +1,6 @@
+/* ============================================
+   REVIEWS SECTION
+   ============================================ */
 .reviews {
   padding: 60px 0;
   background-color: #ffffff;
@@ -15,7 +18,7 @@
   }
 }
 
-/* Заголовок з "хайлайтером" */
+/* Заголовок секції */
 .reviews-title {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
@@ -29,25 +32,26 @@
 @media screen and (min-width: 768px) {
   .reviews-title {
     font-size: 40px;
+    margin-bottom: 20px;
   }
 }
 
+/* Хайлайтер під словом students */
 .reviews-title .accent {
   position: relative;
   display: inline-block;
   z-index: 1;
 }
 
-/* Світло-зелений фон під текстом students */
 .reviews-title .accent::after {
   content: '';
   position: absolute;
   left: -4px;
   right: -4px;
   bottom: 4px;
-  height: 20px;
+  height: 18px;
   background-color: #bee8cc;
-  border-radius: 8px;
+  border-radius: 4px;
   z-index: -1;
 }
 
@@ -57,31 +61,38 @@
   line-height: 1.5;
   color: rgba(18, 20, 23, 0.5);
   text-align: center;
-  max-width: 647px;
+  max-width: 480px;
   margin: 0 auto 32px;
 }
 
-/* Сітка карток */
+/* СІТКА КАРТОК: Виправлено для планшета (2 в ряд) */
 .reviews-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 32px 20px; /* 20px - проміжок між колонками */
   }
 }
 
-/* КАРТКА (Background: Light-gray) */
+@media screen and (min-width: 1280px) {
+  .reviews-list {
+    gap: 32px; /* 32px - на десктопі */
+  }
+}
+
+/* КАРТКА: Ваші відступи (16px), але виправлена логіка */
 .reviews-item {
   background-color: #f3f5f6;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 16px;
   width: 100%;
   transition: transform 300ms ease;
@@ -93,33 +104,42 @@
 
 @media screen and (min-width: 768px) {
   .reviews-item {
-    width: calc((100% - 32px) / 2);
+    width: calc((100% - 20px) / 2); /* Рівно 2 картки */
   }
 }
 
 @media screen and (min-width: 1280px) {
   .reviews-item {
-    width: calc((100% - 64px) / 3);
+    width: calc((100% - 64px) / 3); /* Рівно 3 картки */
     padding: 20px;
   }
 }
 
-/* ЗЕЛЕНА ПЛАШКА (HEADER) */
+/* ЗЕЛЕНА ПЛАШКА: Ваша висота та закруглення */
 .reviews-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #4dc274; /* Акцентний зелений */
+  background-color: #4dc274;
   border-radius: 12px;
   padding: 14px 16px;
   margin-bottom: 24px;
 }
 
 .reviews-avatar {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 2px solid #ffffff;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .reviews-avatar {
+    width: 56px;
+    height: 56px;
+  }
 }
 
 .reviews-name {
@@ -127,22 +147,22 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
-  color: #ffffff; /* Біле ім'я на зеленому фоні */
+  color: #ffffff;
   margin: 0;
 }
 
 .reviews-role {
-  font-family: 'Manrope', sans-serif;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
 }
 
-/* Текст відгуку */
+/* ТЕКСТ: Прибрано side-margins (милиці), вирівняно по падінгу батька */
 .reviews-text {
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: rgba(18, 20, 23, 0.5); /* Напівпрозорий темний */
-  margin: 0 16px 16px 16px;
+  color: rgba(18, 20, 23, 0.5);
+  margin: 0;
+  padding: 0 16px 16px 16px; /* Використовуємо внутрішній відступ для тексту */
 }
