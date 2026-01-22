@@ -13,25 +13,17 @@ body {
 
 
 @media only screen and (min-width: 768px) {
+    .proposal {
+        padding: 60px 0 92px;
+    }
+
     .proposal .container{
-        max-width: 768px;
+        max-width: 752px;
         padding: 0;
         margin: 0 auto
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .proposal {
-        padding: 60px 0 92px;
-    }
-}
-
-
-@media only screen and (min-width: 768px) {
-    .proposal .container {
-        max-width: 752px;
-    }
-}
 
 @media only screen and (min-width: 1280px) {
     .proposal .container {
@@ -39,7 +31,12 @@ body {
         padding: 0 20px;
         margin: 0 auto;
     }
+
+    .proposal {
+        padding: 100px 0;
+    }
 }
+
 
 /* Wrapper (зелений блок) */
 .proposal-wrapper {
@@ -95,7 +92,7 @@ body {
     .proposal-main-title {
         font-size: 60px;
         width: 640px;
-        height: 210px;
+        min-height: 210px;
         position: relative;
         z-index: 1;
     }
@@ -243,7 +240,6 @@ body {
 
 @media only screen and (min-width: 768px) {
     .proposal-content {
-        width: 451px;
         max-width: 451px;
         height: auto;
         padding-right: 0;
@@ -326,7 +322,7 @@ body {
 /* List Item */
 .proposal-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
     font-size: 16px;
     line-height: 1.4;
@@ -342,7 +338,7 @@ body {
         gap: 16px;
         font-size: 20px;
         font-weight: 700;
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
@@ -382,7 +378,6 @@ body {
         margin: 32px 0 0 0;
         width: 306px;
         height: 60px;
-        align-self: flex-start;
     }
 }
 
@@ -433,19 +428,16 @@ body {
 .proposal-icon {
     width: 20px;
     height: 20px;
-    flex-shrink: 0;
     display: block;
     flex: 0 0 20px;
-    margin-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
     .proposal-icon {
         width: 28px;
         height: 28px;
-        flex-shrink: 0;
         flex: 0 0 28px;
-        margin-top: 2px;
+        margin-top: 0;
     }
 }
 
@@ -464,6 +456,7 @@ body {
     }
 }
 
+
 .proposal-item-text {
     margin: 0;
     flex: 1;
@@ -473,19 +466,6 @@ body {
     color: var(--text-dark);
 }
 
-.proposal-item:nth-child(2) .proposal-icon {
-    margin-top: 10px;
-}
-
-.proposal-item:nth-child(3) .proposal-icon {
-    align-self: center;
-    margin-top: 0;
-}
-
-.proposal-item:nth-child(1) .proposal-icon {
-    align-self: center;
-    margin-top: 0;
-}
 
 @media only screen and (min-width: 768px) {
     .proposal-item-text {
