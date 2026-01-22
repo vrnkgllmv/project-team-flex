@@ -1,46 +1,54 @@
 <section class="section application-section">
   <div class="container">
+
     <h2 class="section-title">Leave an <span class="accent-text">application</span></h2>
     <p class="section-description">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
 
     <form class="application-form">
       <div class="form-group">
-        <input type="text" name="user_name" class="form-input" placeholder="Name" />
+        <input type="text" name="user_name" class="form-input" placeholder="Name" pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ\s]+"  title="Введіть ім'я (тільки літери)" required
+        />
       </div>
 
       <div class="form-group">
-        <input type="email" name="user_email" class="form-input" placeholder="Email" />
+        <input type="email" name="user_email" class="form-input" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Введіть коректний email"
+          required
+          />
       </div>
 
       <div class="form-group">
-        <input type="tel" name="user_phone" class="form-input" placeholder="Phone" />
+        <input type="tel" name="user_phone" class="form-input" placeholder="Phone" pattern="[+]?[0-9]{10,13}"
+          title="Введіть номер телефону"
+          required 
+          />
       </div>
 
       <div class="form-group">
-        <textarea name="user_comment" class="form-input form-textarea" placeholder="Comment"></textarea>
+        <textarea name="user_comment" id="user_comment" class="form-input form-textarea" placeholder="Comment"></textarea>
       </div>
 
       <div class="radio-wrapper">
         <p class="radio-title">Choose a teacher</p>
 
-        <label class="radio-label">
-          <input type="radio" name="teacher" value="Maria" class="radio-input" />
-          <span class="radio-castom">Maria</span>
+        <label class="radio-label" for="teacher-maria">
+          <input type="radio" name="teacher" value="Maria" id="teacher-maria" class="radio-input" checked />
+          <span class="radio-custom">Maria</span>
         </label>
 
-        <label class="radio-label">
-          <input type="radio" name="teacher" value="Artem" class="radio-input" />
-          <span class="radio-castom">Artem</span>
+        <label class="radio-label" for="teacher-artem">
+          <input type="radio" name="teacher" value="Artem" id="teacher-ilona" class="radio-input" />
+          <span class="radio-custom">Artem</span>
         </label>
 
-        <label class="radio-label">
-          <input type="radio" name="teacher" value="Ilona" class="radio-input" />
-          <span class="radio-castom">Ilona</span>
+        <label class="radio-label" for="teacher-ilona">
+          <input type="radio" name="teacher" value="Ilona" id="teacher-ilona" class="radio-input" />
+          <span class="radio-custom">Ilona</span>
         </label>
 
-        <label class="radio-label">
-          <input type="radio" name="teacher" value="Volodymyr" class="radio-input" />
-          <span class="radio-castom">Volodymyr</span>
+        <label class="radio-label" for="teacher-volodymyr">
+          <input type="radio" name="teacher" value="Volodymyr" id="teacher-volodymyr" class="radio-input" />
+          <span class="radio-custom">Volodymyr</span>
         </label>
       </div>
 
