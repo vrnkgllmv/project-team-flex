@@ -13,10 +13,19 @@ body {
 
 
 @media only screen and (min-width: 768px) {
-    .proposal {
-        padding: 60px 0;
+    .proposal .container{
+        max-width: 768px;
+        padding: 0;
+        margin: 0 auto
     }
 }
+
+@media only screen and (min-width: 768px) {
+    .proposal {
+        padding: 60px 0 92px;
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
     .proposal .container {
@@ -26,36 +35,32 @@ body {
 
 @media only screen and (min-width: 1280px) {
     .proposal .container {
-        max-width: 1200px;
-        padding: 100px 0;
+        max-width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
     }
 }
 
 /* Wrapper (зелений блок) */
 .proposal-wrapper {
     position: relative;
-    padding: 40px 12px 60px;
+    padding: 40px 20px 64px;
     background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
     border-radius: 16px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: none;
-    min-height: 737px;
-    margin-right: 20px;
-    margin-left: 20px;
 }
 
 @media only screen and (min-width: 768px) {
     .proposal-wrapper {
         width: 704px;
-        max-width: 704px;
-        min-height: 950px;
-        margin: 0 auto;
-        padding: 60px 48px;
-        align-items: flex-start;
+        margin: 0 auto 92px;
+        padding: 60px 18px 32px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -63,21 +68,22 @@ body {
     .proposal-wrapper {
         width: 1152px;
         max-width: 1152px;
-        min-height: 950px;
+        min-height: auto;
         padding: 100px 64px;
+        align-items: flex-start;
     }
 }
 
 /* Main Title (вгорі в зеленому блоці) */
 .proposal-main-title {
+    font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 38px;
-    line-height: 1.1;
+    line-height: 1.05;
     color: var(--white);
     margin: 0 0 40px 0;
     text-align: left;
     width: 100%;
-    padding-left: 20px;
 
 }
 
@@ -87,47 +93,39 @@ body {
 
 @media only screen and (min-width: 768px) {
     .proposal-main-title {
-        padding: 0;
-        margin-bottom: 32px;
         font-size: 60px;
-        text-align: left;
-        line-height: 1.1;
-        max-width: 100%
+        width: 640px;
+        height: 210px;
+        position: relative;
+        z-index: 1;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .proposal-main-title {
         text-align: left;
-        font-weight: 700;
         line-height: 1.2;
-        width: 100%;
+        max-width: 800px;
         padding-left: 64px;
-        margin: 0 0 32px 0;
-        
+        margin-bottom: 72px;
+        height: auto;
     }
 }
 
 /* Card Visual Stack */
 .proposal-card-visual-stack {
     position: relative;
-    z-index: 1;
-    width: 295px;
-    height: 408px;
-    margin: 0 auto;
-    height: 408px;
     border-radius: 16px;
-    background: transparent;
+    width: 295px;
+    z-index: 1;
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
     .proposal-card-visual-stack {
-        max-width: none;
-        width: calc(100% + 96px);
-        height: 500px;
-        justify-content: flex-start;
-        margin: 0 -48px;
+       width: 668px;
+       min-height: 500px;
+       height: auto;
     }
 }
 
@@ -135,77 +133,68 @@ body {
     .proposal-card-visual-stack {
         width: 1024px;
         max-width: 1024px;
-        height: 471px;
-        margin: 0 auto;
+        min-height: 471px;
+        height: auto;
+        margin-top: 0;
     }
 }
 
-/* Stack Layers */
+/* 1. Загальні стилі для обох шарів (Mobile First) */
 .proposal-card-visual-stack::before,
 .proposal-card-visual-stack::after {
     content: "";
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 16px;
     pointer-events: none;
-
 }
 
-@media only screen and (min-width: 768px) {
-
-    .proposal-card-visual-stack::before,
-    .proposal-card-visual-stack::after {
-        border-radius: 30px;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-
-    .proposal-card-visual-stack::before,
-    .proposal-card-visual-stack::after {
-        border-radius: 30px;
-    }
-}
-
+/* 2. НИЖНІЙ ШАР (::before) */
 .proposal-card-visual-stack::before {
     z-index: -2;
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotate(-11deg) translate(28px, 28px);
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(-11deg);
     opacity: 0.5;
-
+    
 }
 
-@media only screen and (min-width: 768px) {
-    .proposal-card-visual-stack::before {
-        transform: rotate(-11deg) translate(28px, 28px);
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    .proposal-card-visual-stack::before {
-        transform: rotate(-11deg);
-
-    }
-}
-
+/* 3. СЕРЕДНІЙ ШАР (::after) */
 .proposal-card-visual-stack::after {
     z-index: -1;
-    background: rgba(255, 255, 255, 0.5);
-    transform: rotate(9deg) translate(32px, 32px);
-    opacity: 1;
-    border-radius: 16px;
+    background: #D4FDE1;
+    transform: rotate(9deg);
 }
 
+/* --- ТАБЛЕТ (768px+) --- */
 @media only screen and (min-width: 768px) {
+
+    .proposal-card-visual-stack::before,
     .proposal-card-visual-stack::after {
-        transform: rotate(10deg) translate(52px, 52px);
         border-radius: 30px;
+    }
+
+    .proposal-card-visual-stack::before {
+        transform: rotate(-10.65deg);
+    }
+
+    .proposal-card-visual-stack::after {
+        transform: rotate(9.8deg);
     }
 }
 
+/* --- ДЕСКТОП (1280px+) --- */
 @media only screen and (min-width: 1280px) {
+
+    .proposal-card-visual-stack::before {
+        transform: rotate(-11deg) translateY(12px);
+        height: 402px;
+    }
+
     .proposal-card-visual-stack::after {
-        transform: rotate(8deg) translate(64px, 64px);
+        transform: rotate(8deg) translateY(12px);
+        height: 463px;
     }
 }
 
@@ -213,40 +202,34 @@ body {
 .proposal-card {
     background: var(--white);
     border-radius: 16px;
-    width: 100%;
-    max-width: none;
-    padding: 40px 20px 20px;
-    transform: none;
-
+    padding: 24px 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
 }
 
 @media only screen and (min-width: 768px) {
     .proposal-card {
-        position: relative;
+        display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 40px;
+        justify-content: space-between;
         gap: 20px;
-
+        padding: 40px;
+        min-height: 500px;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .proposal-card {
-        width: 100%;
-        border-radius: 30px;
         padding: 64px;
-        max-width: 100%;
-        min-height: 470px;
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
         gap: 40px;
-        position: relative;
+        min-height: 471px;
     }
 }
 
@@ -260,15 +243,24 @@ body {
 
 @media only screen and (min-width: 768px) {
     .proposal-content {
-        flex: 1;
-        max-width: 360px;
-        padding-right: 120px;
+        width: 451px;
+        max-width: 451px;
+        height: auto;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .proposal-content {
+        width: 610px;
         max-width: 610px;
+        height: auto;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -318,7 +310,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-bottom: 30px;
+        margin-bottom: 0;
         letter-spacing: -0.02em;
         line-height: 1.2;
     }
@@ -326,13 +318,8 @@ body {
 
 @media only screen and (min-width: 1280px) {
     .proposal-list {
-        width: 610px;
-        height: 156px;
-        gap: 16px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
+        width: 100%;
+        line-height: 1.6;
     }
 }
 
@@ -392,7 +379,10 @@ body {
 
 @media only screen and (min-width: 768px) {
     .proposal-button {
-        max-width: 306px;
+        margin: 32px 0 0 0;
+        width: 306px;
+        height: 60px;
+        align-self: flex-start;
     }
 }
 
@@ -400,6 +390,7 @@ body {
     .proposal-button {
         width: 306px;
         margin-top: 40px;
+        align-self: flex-start;
     }
 }
 
@@ -415,13 +406,13 @@ body {
 @media only screen and (min-width: 768px) {
     .proposal-books {
         display: block;
-        position: absolute;
-        right: -38px;
-        left: auto;
-        bottom: 20px;
-        flex-shrink: 0;
-        max-width: 214px;
+        position: static;
+        right: 0;
+        top: 50%;
+        transform: none;
+        width: 214px;
         height: auto;
+        flex-shrink: 0;
     }
 }
 
@@ -429,11 +420,12 @@ body {
     .proposal-books {
         display: block;
         position: absolute;
-        right: -10px;
-        margin-bottom: 80px;
-        flex-shrink: 0;
-        max-width: 250px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 250px;
         height: auto;
+        flex-shrink: 0;
     }
 }
 
