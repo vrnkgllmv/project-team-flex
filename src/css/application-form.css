@@ -254,12 +254,15 @@
         font-size: 18px;
         line-height: 1.67;
         margin-bottom: 44px;
-        color: var(--text-dark);
+        color: rgba(18, 20, 23, 0.5);
+        text-align: center;
+        width: 709px;
     }
 
     .form-input {
         font-size: 16px;
         line-height: 1.5;
+        
     }
 
     .radio-wrapper {
@@ -294,4 +297,82 @@
         font-size: 14px;
         line-height: 1.71;
     }
+}
+
+
+@media screen and (min-width: 1280px) {
+
+    .application-section .container {
+        max-width: 1120px; 
+    }
+
+    .section-description {
+        max-width: 709px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 64px;
+    }
+
+    .application-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; 
+        gap: 23px; 
+    }
+
+    .promo-card {
+        display: flex;
+        flex-direction: column;
+        
+        width: 492px; 
+        min-height: 100%; 
+        
+        border-radius: 30px;
+        overflow: hidden; 
+        background-color: var(--green-main); 
+        flex-shrink: 0;
+    }
+
+    .promo-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover; 
+    }
+
+    .promo-info {
+        padding: 20px 20px 40px 20px;
+        color: rgba(255, 255, 255, 0.7);;
+        text-align: center;
+        
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .promo-number {
+        font-size: 40px; 
+        font-weight: 700;
+        margin-bottom: 8px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        color: var(--white);
+    }
+
+    .promo-text {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        
+    }
+
+    .application-form {
+        width: 608px;
+    }
+
+    .radio-wrapper {
+        margin-bottom: calc(40px - 18px);
+    }
+
 }
