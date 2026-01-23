@@ -34,7 +34,8 @@
     left: 0;
     right: 0;
     bottom: -2px;
-    height: 20px;
+    height: 12px;
+    width: 172px;
     background-color: #bee8cc;
     border-radius: 8px;
     z-index: -1;
@@ -90,7 +91,7 @@
 }
 
 .form-input::placeholder {
-    color: rgba(18, 20, 23, 0.6);
+    color: rgba(18, 20, 23, 0.7);
 }
 
 .form-input:invalid:not(:placeholder-shown) {
@@ -99,14 +100,16 @@
 
 /* радио-кнопки */
 .radio-wrapper {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 2px;
+    margin-bottom: 22px;
     text-align: left;
 }
 
 .radio-title {
     font-size: 18px;
     font-weight: 600;
+
+    margin-top: 0;
     margin-bottom: 14px;
     color: var(--text-dark);
 }
@@ -114,11 +117,12 @@
 .radio-label {
     display: flex;
     align-items: center;
+    gap: 12px;
     margin-bottom: 8px;
     cursor: pointer;
     font-size: 16px;
     color: var(--text-dark);
-    gap: 12px;
+    position: relative;
 }
 
 .radio-label:last-child {
@@ -126,16 +130,15 @@
 }
 
 .radio-input {
-    appearance: none;
-    -webkit-appearance: none;
     position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    width: 0px;
+    height: 0px;
     opacity: 0;
+    cursor: pointer;
 }
 
 .radio-custom {
+    display: block;
     flex-shrink: 0;
     width: 20px;
     height: 20px;
@@ -176,21 +179,28 @@
     border-radius: 12px;
     cursor: pointer;
     transition: background-color var(--transition);
+    margin-top: 20px;
 }
 
 .submit-btn:hover {
-    background-color: #3da860;
+    background-color: #38AE5F;
 }
 
 /* Политика */
 .policy-text {
+    align-items: center;
+    justify-content: flex-start;
     font-size: 12px;
     color: var(--text-dark-50);
-    margin-top: 16px;
-    text-align: center;
+    text-align: left;
     line-height: 1.33;
+    gap: 12px;
+    font-weight: 400;
 }
 
 .policy-text a {
     color: var(--text-dark-50);
+    text-decoration: underline;
+    display: inline;
+    white-space: nowrap;
 }
