@@ -197,7 +197,6 @@
     border-radius: 12px;
     cursor: pointer;
     transition: background-color var(--transition);
-    margin-top: 40px;
 }
 
 .submit-btn:hover {
