@@ -1,0 +1,162 @@
+.teachers {
+  margin-bottom: 80px;
+}
+
+.title-teachers {
+  font-size: 32px;
+  line-height: 113%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.title-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.title-highlight::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  width: 139px;
+  height: 12px;
+  background-color: var(--green-light);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.description-team {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  color: var(--text-dark-50);
+  margin-bottom: 40px;
+}
+
+.teacher-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.teacher-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-image {
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.teacher-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.description-teachers {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  color: var(--text-dark-50);
+}
+
+@media only screen and (min-width: 768px) {
+  .teachers {
+    margin-bottom: 100px;
+  }
+
+  .title-teachers {
+    font-size: 40px;
+    line-height: 120%;
+  }
+
+  .title-highlight::after {
+    left: -2px;
+    bottom: -2px;
+    width: 170px;
+    height: 20px;
+  }
+
+  .description-team {
+    font-size: 18px;
+    line-height: 167%;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .teacher-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .teacher-item {
+    width: 272px;
+  }
+
+  .description-teachers {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .teachers {
+    margin-bottom: 150px;
+  }
+
+  .title-highlight::after {
+    left: -2px;
+    bottom: -2px;
+  }
+
+  .description-team {
+    font-size: 18px;
+    line-height: 167%;
+    margin-bottom: 64px;
+  }
+
+  .teacher-item {
+    width: 300px;
+  }
+
+  .description-teachers {
+    font-size: 18px;
+    line-height: 156%;
+  }
+
+  .teacher-container {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .teacher-item {
+    width: 232px;
+    flex-direction: column;
+  }
+
+  .description-teachers {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+}
