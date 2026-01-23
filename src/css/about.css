@@ -76,7 +76,7 @@
     background-color: var(--bg-light);
     border-radius: 16px;
     max-width: 335px;
-    max-height: 160px;
+    
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -146,9 +146,7 @@
         padding-top: 96px;
         padding-bottom: 150px;
     }
-    .card {
-        width: calc((100% - 374px) / 2);
-    }
+    
     .icon-container {
         max-width: 310px;
         max-height: 352px;
