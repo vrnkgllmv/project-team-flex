@@ -150,10 +150,10 @@
   }
 
   .lessons-list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 32px;
-    justify-content: wrap;
     justify-content: flex-start;
   }
 
@@ -161,8 +161,6 @@
     width: calc((100% - 32px) / 2);
     padding: 32px 16px;
     max-width: 336px;
-    display: flex;
-    flex-direction: column;
   }
 
   .lessons-heading {
@@ -192,10 +190,6 @@
     padding: 150px 0;
   }
 
-  .lessons-heading {
-    font-size: 40px;
-  }
-
   .lessons-list {
     flex-wrap: nowrap;
     justify-content: center;
@@ -206,22 +200,8 @@
     max-width: 320px;
   }
 
-  .lessons-heading .highlight::after {
-    height: 20px;
-  }
-
-  .lessons-paragraph-card {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
   .lessons-paragraph {
-    font-size: 18px;
     max-width: 665px;
     margin-bottom: 64px;
-  }
-
-  .lessons-card-accent-padding {
-    margin-bottom: 32px;
   }
 }
