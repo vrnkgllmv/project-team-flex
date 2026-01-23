@@ -9,8 +9,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    padding: 40px 0;
 }
 
+.container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
 @media only screen and (min-width: 768px) {
     .proposal {
@@ -33,7 +39,7 @@ body {
     }
 
     .proposal {
-        padding: 100px 0;
+        padding: 150px 0;
     }
 }
 
@@ -53,7 +59,6 @@ body {
 @media only screen and (min-width: 768px) {
     .proposal-wrapper {
         width: 704px;
-        margin: 0 auto 92px;
         padding: 60px 18px 32px 18px;
         display: flex;
         flex-direction: column;
