@@ -153,9 +153,3 @@
     height: 20px;
   }
 }
-
-@media only screen and (max-width: 374px) {
-  .hero__title {
-    font-size: 32px;
-  }
-}
