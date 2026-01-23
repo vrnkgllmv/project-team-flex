@@ -3,6 +3,43 @@
     <h2 class="section-title">Leave an <span class="accent">application</span></h2>
     <p class="section-description">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
     
+
+
+<div class="application-content">
+      
+      <div class="promo-card">
+        
+        <picture>
+          <source 
+            srcset="./img/girl.webp 1x, ./img/girl@2x.webp 2x" 
+            type="image/webp" 
+          />
+          
+          <source 
+            srcset="./img/girl.jpg 1x, ./img/girl@2x.jpg 2x" 
+            type="image/jpeg" 
+          />
+          
+          <img 
+            src="./img/girl.jpg" 
+            alt="Student girl studying online" 
+            class="promo-image" 
+            loading="lazy"
+            width="597"
+            height="537"
+          />
+        </picture>
+        
+        <div class="promo-info">
+          <p class="promo-number">1000</p>
+          <p class="promo-text">
+            of our online English language lessons! This journey has been full of discovery, growth and unforgettable moments, and we are happy to share this joyful event with you.
+          </p>
+        </div>
+      </div>
+
+
+
     <form class="application-form" action="/api/submit" method="POST">
       <div class="form-group">
         <label for="user_name" class="visually-hidden">Name</label>
