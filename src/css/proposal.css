@@ -1,0 +1,482 @@
+
+body {
+    display: block;
+    min-height: 100vh;
+}
+
+.proposal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .proposal {
+        padding: 60px 0 92px;
+    }
+
+    .proposal .container{
+        max-width: 752px;
+        padding: 0;
+        margin: 0 auto
+    }
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .proposal .container {
+        max-width: 1240px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .proposal {
+        padding: 100px 0;
+    }
+}
+
+
+/* Wrapper (зелений блок) */
+.proposal-wrapper {
+    position: relative;
+    padding: 40px 20px 64px;
+    background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-wrapper {
+        width: 704px;
+        margin: 0 auto 92px;
+        padding: 60px 18px 32px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-wrapper {
+        width: 1152px;
+        max-width: 1152px;
+        min-height: auto;
+        padding: 100px 64px;
+        align-items: flex-start;
+    }
+}
+
+/* Main Title (вгорі в зеленому блоці) */
+.proposal-main-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.05;
+    color: var(--white);
+    margin: 0 0 40px 0;
+    text-align: left;
+    width: 100%;
+
+}
+
+.accent-text {
+    color: var(--green-light);
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-main-title {
+        font-size: 60px;
+        width: 640px;
+        min-height: 210px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-main-title {
+        text-align: left;
+        line-height: 1.2;
+        max-width: 800px;
+        padding-left: 64px;
+        margin-bottom: 72px;
+        height: auto;
+    }
+}
+
+/* Card Visual Stack */
+.proposal-card-visual-stack {
+    position: relative;
+    border-radius: 16px;
+    width: 295px;
+    z-index: 1;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+    .proposal-card-visual-stack {
+       width: 668px;
+       min-height: 500px;
+       height: auto;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card-visual-stack {
+        width: 1024px;
+        max-width: 1024px;
+        min-height: 471px;
+        height: auto;
+        margin-top: 0;
+    }
+}
+
+/* 1. Загальні стилі для обох шарів (Mobile First) */
+.proposal-card-visual-stack::before,
+.proposal-card-visual-stack::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+/* 2. НИЖНІЙ ШАР (::before) */
+.proposal-card-visual-stack::before {
+    z-index: -2;
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(-11deg);
+    opacity: 0.5;
+    
+}
+
+/* 3. СЕРЕДНІЙ ШАР (::after) */
+.proposal-card-visual-stack::after {
+    z-index: -1;
+    background: #D4FDE1;
+    transform: rotate(9deg);
+}
+
+/* --- ТАБЛЕТ (768px+) --- */
+@media only screen and (min-width: 768px) {
+
+    .proposal-card-visual-stack::before,
+    .proposal-card-visual-stack::after {
+        border-radius: 30px;
+    }
+
+    .proposal-card-visual-stack::before {
+        transform: rotate(-10.65deg);
+    }
+
+    .proposal-card-visual-stack::after {
+        transform: rotate(9.8deg);
+    }
+}
+
+/* --- ДЕСКТОП (1280px+) --- */
+@media only screen and (min-width: 1280px) {
+
+    .proposal-card-visual-stack::before {
+        transform: rotate(-11deg) translateY(12px);
+        height: 402px;
+    }
+
+    .proposal-card-visual-stack::after {
+        transform: rotate(8deg) translateY(12px);
+        height: 463px;
+    }
+}
+
+/* Card */
+.proposal-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 40px;
+        min-height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card {
+        padding: 64px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        min-height: 471px;
+    }
+}
+
+/* Content */
+.proposal-content {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    z-index: 3;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-content {
+        max-width: 451px;
+        height: auto;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-content {
+        width: 610px;
+        max-width: 610px;
+        height: auto;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Card Title */
+.proposal-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-align: left;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-card-title {
+        width: 307px;
+        font-size: 40px;
+        margin-bottom: 24px;
+        padding: 0;
+        text-align: left;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-card-title {
+        gap: 40px;
+    }
+}
+
+/* List */
+.proposal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-list {
+        width: 481px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 0;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-list {
+        width: 100%;
+        line-height: 1.6;
+    }
+}
+
+/* List Item */
+.proposal-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-dark);
+    font-weight: 700;
+    padding: 0;
+    max-width: 255px;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-item {
+        max-width: 451px;
+        gap: 16px;
+        font-size: 20px;
+        font-weight: 700;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-item {
+        gap: 16px;
+        width: 624px;
+        max-width: 624px;
+        height: 48px;
+    
+    }
+}
+
+/* Button */
+.proposal-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 255px;
+    height: 52px;
+    box-sizing: border-box;
+
+    margin: 20px auto 0;
+    background-color: var(--green-main);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.2s, background-color 0.3s;
+    padding: 0 20px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-button {
+        margin: 32px 0 0 0;
+        width: 306px;
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-button {
+        width: 306px;
+        margin-top: 40px;
+        align-self: flex-start;
+    }
+}
+
+.proposal-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Books Image */
+.proposal-books {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-books {
+        display: block;
+        position: static;
+        right: 0;
+        top: 50%;
+        transform: none;
+        width: 214px;
+        height: auto;
+        flex-shrink: 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-books {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 250px;
+        height: auto;
+        flex-shrink: 0;
+    }
+}
+
+/* Icon */
+.proposal-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex: 0 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .proposal-icon {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-icon {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        flex: 0 0 28px;
+    }
+}
+
+.proposal-item-text {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    letter-spacing: -0.02em;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+
+@media only screen and (min-width: 768px) {
+    .proposal-item-text {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 405px;
+        flex: 0 0 405px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .proposal-item-text {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        max-width: 610px;
+        width: 610px;
+        flex: 0 0 610px;
+        white-space: normal;
+    }
+}

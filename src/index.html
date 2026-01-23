@@ -5,13 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <load src="./partials/header.html" />
-    <load src="./partials/mobile-menu.html" />
+    <header class="page-header">
+      <load src="./partials/header.html" />
+    </header>
 
-    <main>
+    <main class="page-main">
       <load src="./partials/hero.html" />
       <load src="./partials/about.html" />
       <load src="./partials/lessons.html" />
@@ -21,7 +27,11 @@
       <load src="./partials/reviews.html" />
     </main>
 
-    <load src="./partials/footer.html" />
+    <footer class="page-">
+      <load src="./partials/footer.html" />
+    </footer>
+
+
 
     <script type="module" src="./main.js"></script>
   </body>
