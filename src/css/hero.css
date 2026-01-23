@@ -15,31 +15,26 @@ html {
   margin: 16px 0 40px;
 }
 
+@media only screen and (min-width: 1200px) {
+  .hero .container {
+    max-width: 1184px;
+  }
+}
+
 .hero__content {
   position: relative;
   z-index: 10;
   width: 100%;
-  padding: 164px 0 163px 64px;
+  padding: 164px 0 160px 64px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 35px;
   border-radius: 30px;
-  background-image: url(../images/home-hero-bg.jpg);
+  background-image: linear-gradient(96deg, rgba(0, 0, 0, 0.40) 36.36%, rgba(0, 0, 0, 0.00) 51.43%), url(../images/home-hero-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
   overflow: hidden;
-}
-
-.hero__content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(96deg, rgba(0, 0, 0, 0.40) 36.36%, rgba(0, 0, 0, 0.00) 51.43%);
-  z-index: 1;
 }
 
 .hero__title {
@@ -57,7 +52,7 @@ html {
 
 .hero__title-accent {
   display: inline-block;
-  margin: 0 3px;
+  margin: 0 5px 0 0;
   color: #bee8cc !important;
 }
 
@@ -121,9 +116,14 @@ html {
 /* Media Queries for Responsive Design */
 @media only screen and (max-width: 1200px) {
 
+  .hero__title {
+      max-width: 480px;
+  }
+
   .hero__content {
     padding: 250px 32px 295px;
     gap: 32px;
+    background-position: 50% 50%;
   }
 
   .hero__scroll-arrow {
@@ -137,7 +137,8 @@ html {
   .hero__content {
     padding: 425px 20px 72px;
     gap: 40px;
-    background-position: 71% 50%;
+    background-image: linear-gradient(357deg, rgba(0, 0, 0, 0.40) 39.23%, rgba(0, 0, 0, 0.00) 66.28%), url(../images/home-hero-bg.jpg);
+    background-position: 72% 50%;
   }
 
   .hero__title {
@@ -161,5 +162,11 @@ html {
   .hero__scroll-arrow svg {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+.hero__title {
+    font-size: 32px;
   }
 }
