@@ -1,30 +1,196 @@
 .application-section {
-    padding: 60px 20px;
+    padding: 80px 20px 60px 20px;
     background-color: var(--white);
     font-family: var(--main-font);
 }
 
 .container {
     width: 100%;
-    max-width: 480px;
+    max-width: 375px;
     margin: 0 auto;
 }
 
 /* Заголовок */
 .section-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 16px;
-    line-height: 1.2;
+    line-height: 1.13;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 14px;
+    white-space: nowrap;
 }
 
-.accent-text {
+.section-title .accent {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.section-title .accent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 20px;
+    background-color: #bee8cc;
+    border-radius: 8px;
+    z-index: -1;
 }
 
 .section-description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* форма */
+.application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;  
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+
+    border: 1px solid var(--border);
+    font-family: var(--main-font);
+
+    border-radius: 12px;
+    font-size: 14px;
+    color: var(--text-dark);
+    background-color: var(--white);
+    outline: none;
+
+    transition: border-color var(--transition);
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: var(--green-main);
+}
+
+.form-textarea {
+    height: 94px;
+    padding-top: 16px;
+    resize: none;
+}
+
+.form-input::placeholder {
+    color: rgba(18, 20, 23, 0.6);
+}
+
+.form-input:invalid:not(:placeholder-shown) {
+    border-color: #FF4D4F;
+}
+
+/* радио-кнопки */
+.radio-wrapper {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.radio-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--text-dark);
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
     font-size: 16px;
-    line-height: 1.5;
+    color: var(--text-dark);
+    gap: 12px;
+}
+
+.radio-label:last-child {
+    margin-bottom: 0;
+}
+
+.radio-input {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.radio-custom {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 2px solid var(--border); 
+    border-radius: 50%;
+    position: relative;
+    transition: border-color var(--transition);
+    box-sizing: border-box;
+}
+
+.radio-input:checked + .radio-custom {
+    border-color: var(--green-main);
+}
+
+.radio-input:checked + .radio-custom::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--green-main);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Кнопка */
+.submit-btn {
+    width: 100%;
+    height: 52px;
+    background-color: var(--green-main);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: var(--main-font);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.submit-btn:hover {
+    background-color: #3da860;
+}
+
+/* Политика */
+.policy-text {
+    font-size: 12px;
     color: var(--text-dark-50);
-    margin-bottom: 32px;
+    margin-top: 16px;
+    text-align: center;
+    line-height: 1.33;
+}
+
+.policy-text a {
+    color: var(--text-dark-50);
 }
