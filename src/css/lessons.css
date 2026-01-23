@@ -80,7 +80,7 @@
 
 .lessons-item {
   padding: 40px 20px;
-  border: 1px solid #52bb76;
+  border: 1px solid #4dc274;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -88,7 +88,7 @@
 }
 
 .lessons-item-accent {
-  background-color: #52bb76;
+  background-color: #4dc274;
   color: #ffffff;
 }
 
@@ -123,7 +123,7 @@
 .lessons-btn {
   display: block;
   padding: 14px;
-  background-color: #52bb76;
+  background-color: #4dc274;
   color: #ffffff;
   text-decoration: none;
   border-radius: 12px;
