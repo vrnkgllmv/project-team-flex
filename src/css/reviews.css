@@ -2,41 +2,44 @@
    REVIEWS SECTION
    ============================================ */
 .reviews {
-  padding: 60px 0;
+  padding: 80px 0;
   background-color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {
   .reviews {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .reviews {
-    padding: 100px 0;
+    padding: 150px 0;
   }
 }
 
-/* Заголовок секції */
 .reviews-title {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 1.125;
+  letter-spacing: -0.02em;
   text-align: center;
   color: #121417;
   margin-bottom: 16px;
+  max-width: 335px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-title {
     font-size: 40px;
     margin-bottom: 20px;
+    max-width: none;
   }
 }
 
-/* Хайлайтер під словом students */
 .reviews-title .accent {
   position: relative;
   display: inline-block;
@@ -57,15 +60,23 @@
 
 .reviews-description {
   font-family: 'Manrope', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.714;
   color: rgba(18, 20, 23, 0.5);
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 64px;
+  max-width: 340px;
+  margin: 0 auto 40px;
 }
 
-/* СІТКА КАРТОК - SLIDER */
+@media screen and (min-width: 768px) {
+  .reviews-description {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.667;
+    margin-bottom: 64px;
+  }
+}
+
 .reviews-list {
   display: flex;
   flex-direction: row;
@@ -73,42 +84,34 @@
   list-style: none;
   padding: 0;
   margin: 0;
-
-  /* Slider functionality для mobile та tablet */
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
-/* Ховаємо scrollbar в Chrome/Safari */
 .reviews-list::-webkit-scrollbar {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   .reviews-list {
-    gap: 20px;
+    gap: 32px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .reviews-list {
     gap: 32px;
-    overflow-x: visible;
+    overflow: visible;
     flex-wrap: wrap;
   }
 }
 
-/* КАРТКА */
 .reviews-item {
   background-color: #f3f5f6;
   border-radius: 20px;
-  padding: 16px;
+  padding: 20px;
   flex-shrink: 0;
   transition: transform 300ms ease;
 
-  /* Scroll snap */
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -117,31 +120,27 @@
   transform: translateY(-5px);
 }
 
-/* MOBILE: 1 картка на екрані */
 @media screen and (max-width: 767px) {
   .reviews-item {
-    width: calc(100% - 40px);
-    min-width: calc(100% - 40px);
+    width: 100%;
+    min-width: 100%;
   }
 }
 
-/* TABLET: 2 картки на екрані, 3-тя по свайпу */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .reviews-item {
-    width: calc((100% - 20px) / 2);
-    min-width: calc((100% - 20px) / 2);
+    width: calc((100% - 32px) / 2);
+    min-width: calc((100% - 32px) / 2);
   }
 }
 
-/* DESKTOP: 3 картки в сітці (всі видимі) */
 @media screen and (min-width: 1280px) {
   .reviews-item {
     width: calc((100% - 64px) / 3);
-    padding: 20px;
+    padding: 32px 16px;
   }
 }
 
-/* ЗЕЛЕНА ПЛАШКА */
 .reviews-header {
   display: flex;
   align-items: center;
@@ -152,20 +151,18 @@
   margin-bottom: 24px;
 }
 
-.reviews-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  object-fit: cover;
-  flex-shrink: 0;
+@media screen and (min-width: 1280px) {
+  .reviews-header {
+    margin-bottom: 32px;
+  }
 }
 
-@media screen and (min-width: 1280px) {
-  .reviews-avatar {
-    width: 56px;
-    height: 56px;
-  }
+.reviews-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .reviews-name {
@@ -179,16 +176,24 @@
 
 .reviews-role {
   font-size: 12px;
+  line-height: 1.333;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
+  margin-top: 2px;
 }
 
-/* ТЕКСТ */
 .reviews-text {
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(18, 20, 23, 0.5);
   margin: 0;
-  padding: 0 16px 16px 16px;
+  padding: 0 14px 16px 14px;
+}
+
+@media screen and (min-width: 1280px) {
+  .reviews-text {
+    padding: 0 16px;
+    margin-bottom: 8px;
+  }
 }
