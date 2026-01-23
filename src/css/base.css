@@ -13,13 +13,12 @@
   --green-main: #4dc274;
   --green-light: #bee8cc;
   --accent-color: rgba(255, 255, 255, 0.5);
-  --green-gradient-start: #78D79B;
-  --green-gradient-end: #A6E7C1;
+  --green-gradient-start: #78d79b;
+  --green-gradient-end: #a6e7c1;
 
   /* Proposal section colors */
-    --proposal-bg-light: #D4FDE1;
-    --proposal-bg-medium: #a6e7c1;
-
+  --proposal-bg-light: #d4fde1;
+  --proposal-bg-medium: #a6e7c1;
 
   /* Text */
   --text-dark: #121417;
@@ -31,7 +30,7 @@
   --text-white-60: rgba(255, 255, 255, 0.6);
 
   /* Background-colors */
-  --bg-light: #F3F5F6;
+  --bg-light: #f3f5f6;
   --card-bg: #ffffff;
 
   /* UI */
@@ -51,7 +50,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: var(--text-dark-50);
-  background-color: var(--bg-light);
+  background-color: #ffffff;
 
   /* Rendering optimization */
   font-synthesis: none;
