@@ -1,5 +1,132 @@
-<section class="application-form">
+<section class="application-section" id="applicationForm">
   <div class="container">
-    <p>Application Form Placeholder</p>
+    <h2 class="section-title">Leave an <span class="accent">application</span></h2>
+    <p class="section-description">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
+    
+
+
+<div class="application-content">
+      
+      <div class="promo-card">
+        
+        <picture>
+          <source 
+            srcset="./img/girl.webp 1x, ./img/girl@2x.webp 2x" 
+            type="image/webp" 
+          />
+          
+          <source 
+            srcset="./img/girl.jpg 1x, ./img/girl@2x.jpg 2x" 
+            type="image/jpeg" 
+          />
+          
+          <img 
+            src="./img/girl.jpg" 
+            alt="Student girl studying online" 
+            class="promo-image" 
+            loading="lazy"
+            width="597"
+            height="537"
+          />
+        </picture>
+        
+        <div class="promo-info">
+          <p class="promo-number">1000</p>
+          <p class="promo-text">
+            of our online English language lessons! This journey has been full of discovery, growth and unforgettable moments, and we are happy to share this joyful event with you.
+          </p>
+        </div>
+      </div>
+
+
+
+    <form class="application-form" action="/api/submit" method="POST">
+      <div class="form-group">
+        <label for="user_name" class="visually-hidden">Name</label>
+        <input 
+          type="text" 
+          id="user_name"
+          name="user_name" 
+          class="form-input" 
+          placeholder="Name" 
+          pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ\s]+" 
+          title="Please enter your name" 
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="user_email" class="visually-hidden">Email</label>
+        <input 
+          type="email" 
+          id="user_email"
+          name="user_email" 
+          class="form-input" 
+          placeholder="Email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+          title="Please enter a valid email"
+          required
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="user_phone" class="visually-hidden">Phone</label>
+        <input 
+          type="tel" 
+          id="user_phone"
+          name="user_phone" 
+          class="form-input" 
+          placeholder="Phone"
+          pattern="[+]?[0-9]{10,13}" 
+          title="Please enter your phone number"
+          required 
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="user_comment" class="visually-hidden">Comment</label>
+        <textarea 
+          id="user_comment"
+          name="user_comment" 
+          class="form-input form-textarea" 
+          placeholder="Comment"
+        ></textarea>
+      </div>
+
+       <div class="radio-wrapper">
+        <p class="radio-title">Choose a teacher</p>
+      
+      <label class="radio-label" for="teacher-maria">
+  <input type="radio" name="teacher" value="Maria" id="teacher-maria" class="radio-input" checked />
+  <span class="radio-custom"></span>
+  <span class="radio-text">Maria</span>
+</label>
+
+<label class="radio-label" for="teacher-artem">
+  <input type="radio" name="teacher" value="Artem" id="teacher-artem" class="radio-input" />
+  <span class="radio-custom"></span>
+  <span class="radio-text">Artem</span>
+</label>
+
+<label class="radio-label" for="teacher-ilona">
+  <input type="radio" name="teacher" value="Ilona" id="teacher-ilona" class="radio-input" />
+  <span class="radio-custom"></span>
+  <span class="radio-text">Ilona</span>
+</label>
+<label class="radio-label" for="teacher-volodymyr">
+  <input type="radio" name="teacher" value="Volodymyr" id="teacher-volodymyr" class="radio-input" />
+  <span class="radio-custom"></span>
+  <span class="radio-text">Volodymyr</span>
+</label>
+       </div>
+      
+      <button type="submit" class="submit-btn">Send</button>
+      
+      <p class="policy-text">
+        By clicking on "Send" button, you agree to our <a href="#">Privacy Policy</a>, and allow English Excellence to use this information for marketing purposes.
+      </p>
+    </form>
+
+  </div>
   </div>
 </section>
