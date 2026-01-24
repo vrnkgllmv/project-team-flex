@@ -7,8 +7,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    padding: 40px 80px;
+    align-items: center;
+    padding: 40px 16px;
 }
 
 .container {
@@ -48,7 +48,7 @@ body {
     position: relative;
     padding: 40px 20px 64px;
     background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
-    border-radius: 16px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,13 +154,14 @@ body {
 /* 1. Загальні стилі для обох шарів (Mobile First) */
 .proposal-card-visual-stack::before,
 .proposal-card-visual-stack::after {
-    content: "";
+content: "";
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    /* рівно по краях */
     border-radius: 16px;
     pointer-events: none;
+    inset: 4px;
+    bottom: 30px;
 }
 
 /* 2. НИЖНІЙ ШАР (::before) */
@@ -168,8 +169,7 @@ body {
     z-index: -2;
     background: #D4FDE1;
     transform: rotate(-11deg);
-    opacity: 0.5;
-
+    opacity: 1;
 }
 
 /* 3. СЕРЕДНІЙ ШАР (::after) */
@@ -177,6 +177,7 @@ body {
     z-index: -1;
     background: rgba(255, 255, 255, 0.5);
     transform: rotate(9deg);
+    opacity: 0.5
 }
 
 /* Tablet */
@@ -195,10 +196,14 @@ body {
 @media only screen and (min-width: 1280px) {
     .proposal-card-visual-stack::before {
         transform: rotate(-11deg);
+        top: -12px;
+        left: -33px;
     }
 
     .proposal-card-visual-stack::after {
         transform: rotate(8deg);
+        left: 20px;
+
     }
 }
 
@@ -223,6 +228,7 @@ body {
         gap: 20px;
         padding: 40px;
         min-height: 500px;
+        border-radius: 30px;
     }
 }
 
