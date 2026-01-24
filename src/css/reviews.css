@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 1280px) {
   .reviews {
-    padding: 50px 0 150px 0;
+    padding: 0 0 150px 0;
   }
 }
 
@@ -99,6 +99,8 @@
     gap: 32px;
     overflow: visible;
     flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 }
 
