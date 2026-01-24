@@ -116,8 +116,15 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .teachers {
+  .teachers .container {
     margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description-team {
+    max-width: 709px;
   }
 
   .teacher-item {
@@ -129,4 +136,6 @@
     flex-wrap: nowrap;
     gap: 40px;
   }
+
+  
 }
