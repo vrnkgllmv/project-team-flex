@@ -8,11 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-<<<<<<< HEAD
-    padding: 40px 0;
-=======
     padding: 40px 80px;
->>>>>>> main
 }
 
 .container {
