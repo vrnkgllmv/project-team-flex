@@ -1,6 +1,8 @@
 .hero {
   width: 100%;
-  margin: 16px 0 80px;
+  padding-top: 16px;
+  padding-bottom: 80px;
+  margin: 0;
 }
 
 .hero .container {
@@ -111,7 +113,7 @@
 /* Tablet: від 768px */
 @media only screen and (min-width: 768px) {
   .hero {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 
   .hero__content {
@@ -158,7 +160,7 @@
 
 @media only screen and (min-width: 1280px) {
   .hero {
-    margin-bottom: 96px;
+    padding-bottom: 96px;
   }
 
   .hero .container {

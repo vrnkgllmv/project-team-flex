@@ -10,7 +10,7 @@
   letter-spacing: -0.02em;
   color: var(--text-dark);
   text-align: center;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .about-title .accent {
@@ -50,7 +50,7 @@
   line-height: 32px;
   letter-spacing: -0.02em;
   color: var(--green-main);
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .card-text {
@@ -90,14 +90,13 @@
   max-height: 313px;
   max-width: 335px;
   width: 100%;
+  padding: 51px 40px;
+  box-sizing: border-box;
 }
 
 .about-icon {
-  margin-top: 51px;
-  margin-bottom: 51px;
-  margin-left: 41px;
-  margin-right: 40px;
-  width: 254px;
+  width: 100%;
+  max-width: 254px;
   height: 211px;
   background-image: url('../img/memoji.png');
   background-image: image-set(
@@ -107,6 +106,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -137,6 +137,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 16px 225px;
   }
 
   .about-text {
@@ -156,10 +157,6 @@
     padding-bottom: 150px;
   }
 
-  .icon-container {
-    max-width: 310px;
-    max-height: 352px;
-  }
   .card-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -185,6 +182,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 310px;
+    max-height: 352px;
+    padding: 71px 28px;
   }
   .about-text {
     max-width: 709px;
