@@ -137,12 +137,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 225px;
+    padding: 16px;
   }
 
   .about-icon {
     width: 100%;
-    max-width: 254px;
+    max-width: 214px;
     height: auto;
   }
 
