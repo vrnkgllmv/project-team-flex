@@ -1,5 +1,5 @@
 .teachers {
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .title-teachers {
@@ -60,7 +60,7 @@
 .teacher-name {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.20;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--text-dark);
@@ -77,12 +77,12 @@
 
 @media only screen and (min-width: 768px) {
   .teachers {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 
   .title-teachers {
     font-size: 40px;
-    line-height: 1.20;
+    line-height: 1.2;
   }
 
   .title-highlight::after {
@@ -111,13 +111,16 @@
 
   .description-teachers {
     font-size: 16px;
-    line-height: 1.50;
+    line-height: 1.5;
   }
 }
 
 @media only screen and (min-width: 1280px) {
+  .teachers {
+    padding-bottom: 150px;
+  }
+
   .teachers .container {
-    margin-bottom: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +138,7 @@
   .teacher-container-list {
     flex-wrap: nowrap;
     gap: 40px;
+    max-width: 1024px;
+    margin: 0 auto;
   }
-
-  
 }

@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 1280px) {
   .reviews {
-    padding: 50px 0 150px 0;
+    padding: 0 0 150px 0;
   }
 }
 
@@ -99,17 +99,20 @@
     gap: 32px;
     overflow: visible;
     flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
   }
 }
 
 .reviews-item {
   background-color: #f3f5f6;
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 20px;
   flex-shrink: 0;
   transition: transform 300ms ease;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  overflow: hidden;
 }
 
 .reviews-item:hover {
@@ -128,6 +131,7 @@
     width: calc((100% - 32px) / 2);
     min-width: calc((100% - 32px) / 2);
     padding: 32px 16px;
+    border-radius: 30px;
   }
 }
 
@@ -135,6 +139,7 @@
   .reviews-item {
     width: calc((100% - 64px) / 3);
     padding: 32px 16px 32px 16px;
+    border-radius: 30px;
   }
 }
 
