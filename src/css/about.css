@@ -140,6 +140,12 @@
     padding: 16px 225px;
   }
 
+  .about-icon {
+    width: 100%;
+    max-width: 254px;
+    height: auto;
+  }
+
   .about-text {
     font-size: 18px;
     line-height: 30px;
@@ -186,6 +192,12 @@
     max-height: 352px;
     padding: 71px 28px;
   }
+
+  .about-icon {
+    width: 254px;
+    height: 211px;
+  }
+
   .about-text {
     max-width: 709px;
   }
