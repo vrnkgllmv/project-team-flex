@@ -71,6 +71,7 @@
   color: #ffffff;
   text-decoration: none;
   font-style: normal;
+  transition: color 250ms ease;
 }
 
 .contact-link:hover,
